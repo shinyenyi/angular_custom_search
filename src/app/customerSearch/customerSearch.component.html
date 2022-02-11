@@ -1,7 +1,12 @@
 <div class="layout-column align-items-center mt-50">
   <section class="layout-row align-items-center justify-content-center">
+    <!--Currently using the filter-->
     <input type="text" class="large" placeholder="Enter Search Term eg Phil" data-test-id="app-input"
-      [(ngModel)]="searchString" (input)="searchForCustomer($event.target.value)" />
+      [(ngModel)]="searchString" />
+
+    <!--Uncomment if you want to use the method in the component-->
+    <!-- <input type="text" class="large" placeholder="Enter Search Term eg Phil" data-test-id="app-input"
+      [(ngModel)]="searchString" (input)="searchForCustomer($event.target.value)" /> -->
   </section>
 
   <div class="card w-45 mx-auto mt-75 pb-5">
@@ -16,8 +21,7 @@
         </tr>
       </thead>
       <tbody data-test-id="searched-customers">
-        <tr class="slide-up-fade-in"
-          *ngFor="let customer of customers | searchFilter: searchString;">
+        <tr class="slide-up-fade-in" *ngFor="let customer of customers | searchFilter: searchString;">
           <!-- Use below to render row for each customer object -->
           <td>{{customer.name}}</td>
           <td>{{customer.age}}</td>
