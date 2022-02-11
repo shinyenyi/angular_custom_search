@@ -4,11 +4,13 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CustomerSearch } from './customerSearch/customerSearch.component';
+import { SearchFilterPipe } from './customerSearch/customerSearch.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerSearch
+    CustomerSearch,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
