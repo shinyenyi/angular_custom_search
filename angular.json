@@ -115,6 +115,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "customerSearch"
+    }
+  },
+  "defaultProject": "customerSearch",
+  "cli": {
+    "analytics": "07fa5524-5a7e-419b-b333-fa9f81b72faa"
+  }
 }
